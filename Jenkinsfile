@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("suresh/nodeapp")
+        app = sudo docker.build("suresh/nodeapp")
     }
     stage('Push image') {
         /* 
