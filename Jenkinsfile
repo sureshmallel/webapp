@@ -1,7 +1,7 @@
 node {
     checkout scm
 
-    docker.withRegistry('https://hub.docker.com/repository/docker/surimallel/jenkinsdocker', 'Dockerhub') {
+    docker.withRegistry('https://hub.docker.com/', 'Dockerhub') {
 
         def customImage = docker.build("my-image:${env.BUILD_ID}")
 
