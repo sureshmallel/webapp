@@ -1,6 +1,5 @@
 node {
     checkout scm
-    docker login --password-stdin
     docker.withRegistry('https://hub.docker.com/', 'Dockerhub') {
 
         def customImage = docker.build("my-image:${env.BUILD_ID}")
